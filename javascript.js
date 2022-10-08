@@ -1,16 +1,23 @@
 const loginForm = document.querySelector("#login-form")
-const loginIDInput = document.querySelector("#login-form #ID");
-const loginPWInput = document.querySelector("#login-form #PW");
+const loginIDInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 
 function onLoginSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
+    loginForm.classList.add("hidden")
     const userID = loginIDInput.value;
-    const userPW = loginPWInput.value;
     localStorage.setItem("userID", userID);
-    localStorage.setItem("userPW", userPW);
 }
 
-
-
 loginForm.addEventListener("submit", onLoginSubmit);
+
+function savedUsername(userID) {
+
+}
+
+const savedUsername = localStorage.getItem("userID");
+
+if (savedUsername === null); {
+    loginForm.classList.remove("hidden");
+    loginForm.addEventListener("submit", onLoginSubmit);
+} 

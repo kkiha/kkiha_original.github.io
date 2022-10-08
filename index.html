@@ -8,23 +8,16 @@
     <title>Vanilla Webpage</title>
 </head>
 <body>
-    <form id = "login-form">
+    <form id = "login-form" class = "hidden" >
         <input 
         required 
         maxlength="15"
         type="text"
-        placeholder = "ID" 
-        id="ID"
-        />
-        <input 
-        required 
-        maxlength="15"
-        type="text"
-        placeholder = "Passward" 
-        id="PW"
+        placeholder = "What is your name?" 
         />
         <button>Login</button>
     </form>
+    <h1 class = "hidden" id = "greeting"></h1>
 </body>
     <script src="javascript.js"></script>
 </html>
